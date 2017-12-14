@@ -2,13 +2,13 @@ package pages;
 
 import java.util.List;
 
+import libs.Wait;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
-
-import pagebuilder.Wait;
 
 public class ManageAreaPage {
 	private WebDriver driver;

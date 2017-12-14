@@ -1,9 +1,14 @@
-package pages;
+package pagebuilders;
 
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
+
+import libs.Browsers;
+import libs.BrowsersType;
+import libs.ParseProperties;
+import libs.Wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +27,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pagebuilder.Browsers;
-import pagebuilder.BrowsersType;
-import pagebuilder.ParseProperties;
-import pagebuilder.Wait;
-
-public class LoginHomepage3 {
+public class LoginHomepage2 {
 	
 	private WebDriver driver;
 	//Wait wait = new Wait(driver);
@@ -43,12 +43,7 @@ public class LoginHomepage3 {
 	@FindBy(className="login-buttom")
 	private WebElement submitBtn;
 	
-/*	@FindBy(xpath="//section[@id='container']/descendant::span[3]")
-	private WebElement oagh;*/
-	@FindBy(xpath="//span[contains(text(),'admin')]")
-	private WebElement oagh;
-	
-	public LoginHomepage3(WebDriver driver){
+	public LoginHomepage2(WebDriver driver){
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -70,9 +65,6 @@ public class LoginHomepage3 {
 	public void submitLogin(){
 		submitBtn.click();
 		//submitBtn.submit();
-	}
-	public WebElement getloginname(){
-		return oagh;
 	}
 	/*
 	@Test

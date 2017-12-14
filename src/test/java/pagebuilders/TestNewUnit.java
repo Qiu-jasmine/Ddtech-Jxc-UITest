@@ -1,4 +1,8 @@
-package pages;
+package pagebuilders;
+
+import libs.Browsers;
+import libs.BrowsersType;
+import libs.Do;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,10 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import pagebuilder.Browsers;
-import pagebuilder.BrowsersType;
-import pagebuilder.Do;
 
 public class TestNewUnit {
 	private WebDriver driver;

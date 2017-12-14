@@ -1,8 +1,12 @@
-package pages;
+package pagebuilders;
 
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+
+import libs.Browsers;
+import libs.BrowsersType;
+import libs.ParseProperties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,10 +21,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import pagebuilder.Browsers;
-import pagebuilder.BrowsersType;
-import pagebuilder.ParseProperties;
 
 public class LoginHomepage {
 /*	String baseUrl ="http://test2.diandianwaimai.com:6030";

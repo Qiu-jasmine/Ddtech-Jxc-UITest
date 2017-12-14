@@ -1,16 +1,17 @@
-package archivesManageModule;
+package Testcases_archivesManageModule;
+
+import libs.Browsers;
+import libs.BrowsersType;
+import libs.Do;
+import libs.Wait;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pagebuilder.Browsers;
-import pagebuilder.BrowsersType;
-import pagebuilder.Do;
-import pagebuilder.Wait;
-import pages.LoginHomepage;
-import pages.UnitSetPage;
+import pagebuilders.LoginHomepage;
+import pagebuilders.UnitSetPage;
 
 public class TestUnitSet {
 	private WebDriver driver;

@@ -1,6 +1,8 @@
-package pagebuilder;
+package libs;
 
 import java.util.List;
+
+import libs.Wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -8,8 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 //import pagebuilder.ParseProperties;
-import pagebuilder.Wait;
-//import pagebuilder.CustomException;
 
 public class Do {
 

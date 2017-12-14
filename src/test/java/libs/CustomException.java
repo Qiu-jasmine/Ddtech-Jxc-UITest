@@ -1,4 +1,4 @@
-package pagebuilder;
+package libs;
 
 import org.openqa.selenium.NoSuchElementException;
 

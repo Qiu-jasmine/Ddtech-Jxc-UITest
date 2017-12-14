@@ -1,10 +1,11 @@
-package pages;
+package pagebuilders;
 
+
+import libs.Do;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import pagebuilder.Do;
 import pages.locators.HomeLoc;
 
 public class LoginHomepage4 {

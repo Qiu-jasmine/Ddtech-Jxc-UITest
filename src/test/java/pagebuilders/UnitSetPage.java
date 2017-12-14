@@ -1,4 +1,6 @@
-package pages;
+package pagebuilders;
+
+import libs.Wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,8 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import pagebuilder.Wait;
 
 public class UnitSetPage {
 	private WebDriver driver;

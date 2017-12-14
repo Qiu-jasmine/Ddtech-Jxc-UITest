@@ -1,6 +1,11 @@
-package pages;
+package pagebuilders;
 
 import java.io.IOException;
+
+import libs.Browsers;
+import libs.BrowsersType;
+import libs.ParseProperties;
+import libs.Wait;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,11 +13,6 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import pagebuilder.Browsers;
-import pagebuilder.BrowsersType;
-import pagebuilder.ParseProperties;
-import pagebuilder.Wait;
 
 
 public class Practice2OnTestNG {
