@@ -1,0 +1,14 @@
+<suite name ="FireflyAutomation">
+<parameter name ="TestData" value="\tool\test.properties"/>
+
+	<test name="Practice1" preserve-order="true">
+ 		<classes>
+			<class name="dddm.para.Testjxc1">
+				<method>
+					<include> name = "test"</include>
+				</method>			
+			</class>
+		</classes>
+		</test>
+
+</suite>
