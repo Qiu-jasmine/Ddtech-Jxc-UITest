@@ -184,6 +184,11 @@
 <!--      	<artifactId>selenium-java</artifactId> -->
 <!--      	<version>3.1.0</version> -->
 <!--      </dependency> -->
+  	<dependency>
+  		<groupId>com.opencsv</groupId>
+  		<artifactId>opencsv</artifactId>
+  		<version>4.1</version>
+  	</dependency>
   </dependencies>
 
 <!--   <dependencies>
