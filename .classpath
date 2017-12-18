@@ -24,7 +24,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse/selenium-server-standalone-2.53.1.jar"/>
-	<classpathentry kind="lib" path="E:/mycsvforselenium/javacsv.jar"/>
+	<classpathentry kind="lib" path="tool/javacsv.jar"/>
+	<classpathentry kind="lib" path="tool/selenium-server-standalone-2.53.1.jar"/>
+	<classpathentry kind="lib" path="tool/sqlite-jdbc-3.21.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

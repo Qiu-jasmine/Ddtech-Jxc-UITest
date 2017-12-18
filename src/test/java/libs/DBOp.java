@@ -19,6 +19,7 @@ public class DBOp {
 	public void conn(String db){
 		try {
 			Class.forName("org.sqlite.JDBC");
+			//不加参数的：Connection conn = DriverManager.getConnection("jdbc:sqlite:"+System.getProperty("user.dir")+"\\data\\mydatabase2.sqlite");
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:"+db);
 			stat = conn.createStatement();
 		} catch (ClassNotFoundException e) {
