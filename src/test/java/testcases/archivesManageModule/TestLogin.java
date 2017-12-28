@@ -1,4 +1,4 @@
-package Testcases_archivesManageModule;
+package testcases.archivesManageModule;
 
 import libs.Browsers;
 import libs.BrowsersType;

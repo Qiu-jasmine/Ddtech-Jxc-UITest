@@ -1,4 +1,4 @@
-package Testcases_archivesManageModule;
+package testcases.archivesManageModule;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package Testcases_archivesManageModule;
+package testcases.archivesManageModule;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -8,9 +8,7 @@ import libs.Browsers;
 import libs.BrowsersType;
 import libs.Do;
 import libs.ParseProperties;
-import libs.TestCSVdemo;
 import pagebuilders.LoginHomepage4;
-import pagebuilders.LoginHomepage5;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,43 +19,22 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-public class TestLoginforpagecsv6 {
+public class TestLogin2forpage4 {
 	private WebDriver driver;
 //	private Do du;
-	private LoginHomepage5 loginpage;
-	//private ParseProperties td;
+	private LoginHomepage4 loginpage;
+	private ParseProperties td;
 	@BeforeClass
 	public void inialize() throws IOException{
 		Browsers browser = new Browsers(BrowsersType.firefox);
 		driver=browser.driver;
 		//du =new Do(driver);
-		//td = new ParseProperties(System.getProperty("user.dir")+"/data/test.properties");
-		//TestCSVdemo a = new TestCSVdemo(System.getProperty("user.dir")+"\\data\\userinfo.csv");
+		td = new ParseProperties(System.getProperty("user.dir")+"/data/test.properties");
 		driver.manage().window().maximize();
-		//loginpage = new LoginHomepage5(driver);		
+		loginpage = new LoginHomepage4(driver);		
 	}
-	//页面接口元素与csv联合用,需要调试
-	@Test
-	public void login(){
-		TestCSVdemo a = new TestCSVdemo(System.getProperty("user.dir")+"\\data\\userinfo.csv");
-		loginpage = new LoginHomepage5(driver);	
-		WebDriverWait wait = new WebDriverWait(driver,15);
-		loginpage.navigateToJxc(a.getTestData("URL", "tc1"));
-		loginpage.setMerchantId(a.getTestData("mchid", "tc1")).setLoginName(a.getTestData("username", "tc1")).setpasswd(a.getTestData("passwd", "tc1")).submitLogin();
-		wait.until(ExpectedConditions.urlContains("archivesManage"));
-		Assert.assertEquals(loginpage.getloginname().isDisplayed(), true);
-	}
-	//如果是返回页面的形式，则可以连写方法
-/*	@Test
-	public void login(){
-		WebDriverWait wait = new WebDriverWait(driver,15);
-		loginpage.navigateToJxc(td.getValue("baseUrl"));
-		loginpage.setMerchantId(td.getValue("ZMchid")).setLoginName(td.getValue("ZUSer")).setpasswd(td.getValue("passwd")).submitLogin();
-		wait.until(ExpectedConditions.urlContains("archivesManage"));
-		Assert.assertEquals(loginpage.getloginname().isDisplayed(), true);
-	}*/
 	//使用parseProperties参数化及接口传元素
-/*	@Test
+	@Test
 	public void login(){
 		WebDriverWait wait = new WebDriverWait(driver,15);
 		loginpage.navigateToJxc(td.getValue("baseUrl"));
@@ -67,7 +44,7 @@ public class TestLoginforpagecsv6 {
 		loginpage.submitLogin();	
 		wait.until(ExpectedConditions.urlContains("archivesManage"));
 		Assert.assertEquals(loginpage.getloginname().isDisplayed(), true);
-	}*/
+	}
 /*	@Test //用户加时间制造唯一值的通用写法
 	public void register(){
 		SimpleDateFormat sdf = new SimpleDateFormat();
@@ -77,8 +54,6 @@ public class TestLoginforpagecsv6 {
 		String accountname = sdf.format(c1.getTime());
 		//可以使用页面联合调用方法的方式
 		//page.setAccountName("test"+accountname).setpasswd("passwd").sumbmit();
-		 //动态xpath的验证
-		//Assert.assertEquals(loginpage.getWebElement(HomeLoc.oagh1,"test"+accountname).isDisplayed(), true);
 	}*/
 	/*@Test //未参数化调试用
 	public void login(){

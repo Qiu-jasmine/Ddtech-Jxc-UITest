@@ -69,13 +69,30 @@ public class DBOp {
 		return css;
 	}
 	
-	
+	public String getWebelementValue(String locatorname){
+		String value = null;
+		try {
+			rsq =stat.executeQuery("select * from "+tablename+" where WebElementName = '"+locatorname+"';");
+			while (rsq.next()) { 
+
+				
+				value=rsq.getString("WebElementValue");
+
+				}
+				rsq.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return value;
+	}
 	
 	public static void main(String[] args) {
-		DBOp test = new DBOp("Mail126Page");
-		test.conn("mylocator.sqlite");
-		System.out.println(test.getLocatorXpath( "UserName"));
-		System.out.print(test.getLocatorCSS( "Password"));
+		DBOp test = new DBOp("LoginHomepage");
+		test.conn(System.getProperty("user.dir")+"\\data\\mydatabase2.sqlite");
+		System.out.println(test.getLocatorXpath( "oagh"));
+		System.out.print(test.getLocatorCSS( "loginName"));
 		
 	}
 	

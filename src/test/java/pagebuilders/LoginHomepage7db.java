@@ -10,23 +10,23 @@ import org.openqa.selenium.WebElement;
 
 import pages.locators.HomeLoc;
 
-public class LoginHomepage6db {
+public class LoginHomepage7db {
 	private WebDriver driver;
 	private Do du;
-	private DBOp dbsession = new DBOp("LoginHOmepage");
+	private DBOp dbsession = new DBOp("LoginPage");
 	
-	public  LoginHomepage6db(WebDriver driver){
+	public  LoginHomepage7db(WebDriver driver){
 		this.driver=driver;
-		du = new Do(driver);
+		//du = new Do(driver);
 		dbsession.conn(System.getProperty("user.dir")+"\\data\\mydatabase2.sqlite");
 	}
 	
-	public LoginHomepage6db navigateToJxc(String url){
+	public LoginHomepage7db navigateToJxc(String url){
 		//driver.findElement(By.cssSelector(dbsession.getLocatorCSS("")))
 		driver.get(url);
 		return this;
 	}
-	public LoginHomepage6db setMerchantId(String merchantId){
+	public LoginHomepage7db setMerchantId(String merchantId){
 		WebElement merchantId1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(merchantId)));
 		merchantId1.clear();
 		merchantId1.sendKeys(dbsession.getWebelementValue(merchantId));
@@ -34,7 +34,7 @@ public class LoginHomepage6db {
 		du.whatCSS(HomeLoc.merchantId).sendKeys(merchantId);*/
 		 return this;
 	}
-	public LoginHomepage6db setLoginName(String loginname){
+	public LoginHomepage7db setLoginName(String loginname){
 		WebElement loginname1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(loginname)));
 		loginname1.clear();
 		loginname1.sendKeys(dbsession.getWebelementValue(loginname));
@@ -42,22 +42,38 @@ public class LoginHomepage6db {
 		du.whatCSS(HomeLoc.loginName).sendKeys(loginname);*/
 		return this;
 	}
-	public LoginHomepage6db setpasswd(String passwd){
-		WebElement passwd1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(passwd)));
+	public LoginHomepage7db setValue(String WebElementName,String inputvalue){
+		WebElement passwd1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(WebElementName)));
+		//sendValue(driver.findElement(By.cssSelector(dbsession.getLocatorCSS(passwd))),"admin");
 		 passwd1.clear();
-		 passwd1.sendKeys(dbsession.getWebelementValue(passwd));
+		 passwd1.sendKeys(inputvalue);
 	/*	du.whatCSS(HomeLoc.passwd).clear();
 		du.whatCSS(HomeLoc.passwd).sendKeys(passwd);*/
 		return this;
 	}
-	public LoginHomepage6db submitLogin(String loginbutton){
+	public LoginHomepage7db setpasswd(String WebElementName,String inputvalue){
+		WebElement passwd1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(WebElementName)));
+		//sendValue(driver.findElement(By.cssSelector(dbsession.getLocatorCSS(passwd))),"admin");
+		 passwd1.clear();
+		 passwd1.sendKeys(inputvalue);
+	/*	du.whatCSS(HomeLoc.passwd).clear();
+		du.whatCSS(HomeLoc.passwd).sendKeys(passwd);*/
+		return this;
+	}
+	public LoginHomepage7db submitLogin(String loginbutton){
 		/*du.whatclassname(HomeLoc.loginbutton).click();*/
 		driver.findElement(By.xpath(dbsession.getLocatorXpath(loginbutton))).click();
 		return this;
 	}
-	public WebElement getloginname(){
+/*	public  void sendValue(WebElement element,String value){
+		//driver.findElement(By.cssSelector(dbsession.getLocatorCSS("")))
+		element.clear();
+		element.sendKeys(value);
+		//return this;
+	}*/
+/*	public WebElement getloginname(){
 		return du.what(HomeLoc.oagh);
-	}
+	}*/
 	//动态元素的校验方式
 /*	public WebElement getWebElement(String wn,String accountname){
 		return du.what(String.format(wn,accountname));
