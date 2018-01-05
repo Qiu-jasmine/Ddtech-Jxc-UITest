@@ -1,4 +1,4 @@
 testcaseid,mchid,username,passwd,URL,comments
 tc1,10068,admin,admin,http://test2.diandianwaimai.com:6030/,zb
-tc2,10068,md001,admin,u2,md17911
-tc3,10068,md002,admin,u3,md17910
+tc2,10068,md001,admin,http://test2.diandianwaimai.com:6030/,md17911
+tc3,10068,md002,admin,http://test2.diandianwaimai.com:6030/,md17910

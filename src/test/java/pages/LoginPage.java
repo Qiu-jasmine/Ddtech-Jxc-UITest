@@ -7,6 +7,7 @@ import libs.Do;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 import pages.locators.HomeLoc;
@@ -30,6 +31,16 @@ public class LoginPage {
 		WebElement passwd1=driver.findElement(By.cssSelector(dbsession.getLocatorCSS(WebElementName)));
 		 passwd1.clear();
 		 passwd1.sendKeys(inputvalue);
+		return this;
+	}
+	public LoginPage checkremenberpw(String checkboxWbName){
+		WebElement  checkbox=driver.findElement(By.xpath(dbsession.getLocatorXpath(checkboxWbName)));
+		if(!checkbox.isSelected()){
+			checkbox.click();
+		}else
+		{
+			System.out.println("已记住密码了，请往下一步");
+		}	
 		return this;
 	}
 	//提交登录：loginbuttonWe：数据库中对应的元素名称

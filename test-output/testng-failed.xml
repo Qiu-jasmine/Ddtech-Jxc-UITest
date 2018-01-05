@@ -7,7 +7,7 @@
         <methods>
           <include name="releaseBrowser"/>
           <include name="inialize"/>
-          <include name="login"/>
+          <include name="loginBycase"/>
         </methods>
       </class> <!-- testcases.login.TestLoginpage -->
     </classes>

@@ -1,29 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18772" started-at="2017-12-28T03:23:16Z" finished-at="2017-12-28T03:23:35Z">
+  <suite name="Default suite" duration-ms="11066" started-at="2018-01-03T03:51:52Z" finished-at="2018-01-03T03:52:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18772" started-at="2017-12-28T03:23:16Z" finished-at="2017-12-28T03:23:35Z">
-      <class name="testcases.login.TestHomePage">
-        <test-method status="PASS" signature="inialize()[pri:0, instance:testcases.login.TestHomePage@5d5eef3d]" name="inialize" is-config="true" duration-ms="9722" started-at="2017-12-28T11:23:16Z" finished-at="2017-12-28T11:23:26Z">
+    <test name="Default test" duration-ms="11066" started-at="2018-01-03T03:51:52Z" finished-at="2018-01-03T03:52:03Z">
+      <class name="testcases.login.TestLoginpage">
+        <test-method status="PASS" signature="inialize()[pri:0, instance:testcases.login.TestLoginpage@5d5eef3d]" name="inialize" is-config="true" duration-ms="6878" started-at="2018-01-03T11:51:52Z" finished-at="2018-01-03T11:51:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inialize -->
-        <test-method status="PASS" signature="login()[pri:0, instance:testcases.login.TestHomePage@5d5eef3d]" name="login" duration-ms="2987" started-at="2017-12-28T11:23:26Z" finished-at="2017-12-28T11:23:29Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:testcases.login.TestLoginpage@5d5eef3d]" name="login" duration-ms="2998" started-at="2018-01-03T11:51:59Z" finished-at="2018-01-03T11:52:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="home()[pri:0, instance:testcases.login.TestHomePage@5d5eef3d]" name="home" duration-ms="4286" started-at="2017-12-28T11:23:29Z" depends-on-methods="testcases.login.TestHomePage.login" finished-at="2017-12-28T11:23:33Z">
+        <test-method status="SKIP" signature="loginBycase(java.lang.String)[pri:0, instance:testcases.login.TestLoginpage@5d5eef3d]" name="loginBycase" duration-ms="0" started-at="2018-01-03T11:52:02Z" finished-at="2018-01-03T11:52:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method loginBycase requires 1 parameters but 0 were supplied in the @Test annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method loginBycase requires 1 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1270)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:985)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1075)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- home -->
-        <test-method status="PASS" signature="releaseBrowser()[pri:0, instance:testcases.login.TestHomePage@5d5eef3d]" name="releaseBrowser" is-config="true" duration-ms="1727" started-at="2017-12-28T11:23:33Z" finished-at="2017-12-28T11:23:35Z">
+        </test-method> <!-- loginBycase -->
+        <test-method status="PASS" signature="releaseBrowser()[pri:0, instance:testcases.login.TestLoginpage@5d5eef3d]" name="releaseBrowser" is-config="true" duration-ms="1173" started-at="2018-01-03T11:52:02Z" finished-at="2018-01-03T11:52:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- releaseBrowser -->
-      </class> <!-- testcases.login.TestHomePage -->
+      </class> <!-- testcases.login.TestLoginpage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

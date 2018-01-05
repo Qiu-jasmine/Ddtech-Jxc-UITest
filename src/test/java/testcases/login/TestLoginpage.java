@@ -45,10 +45,24 @@ public class TestLoginpage {
 		loginpage.setValue("merchantId", userinfo.getTestData("mchid", "tc1"));
 		loginpage.setValue("loginName", userinfo.getTestData("username", "tc1"));
 		loginpage.setValue("passwd", userinfo.getTestData("passwd", "tc1"));
+		loginpage.checkremenberpw("rembpwCheckbox");
+		loginpage.checkremenberpw("rembpwCheckbox");
 		loginpage.submitLogin("loginbutton");
 		wait.waitForElementPresent(loginpage.getValue("archivesManage"));
 	    Assert.assertEquals(driver.findElement(By.xpath(loginpage.getValue("archivesManage"))).isDisplayed(), true);
 	}
+/*	@Test
+	public void loginBycase(String casename){
+		//读取csv文件给参数赋值,提供给其他用例使用登录模块，只需要输入
+		loginpage.navigateToJxc(userinfo.getTestData("URL", casename));
+		loginpage.setValue("merchantId", userinfo.getTestData("mchid", casename));
+		loginpage.setValue("loginName", userinfo.getTestData("username", casename));
+		loginpage.setValue("passwd", userinfo.getTestData("passwd", casename));
+		loginpage.checkremenberpw("rembpwCheckbox");
+		loginpage.submitLogin("loginbutton");
+		wait.waitForElementPresent(loginpage.getValue("archivesManage"));
+	    Assert.assertEquals(driver.findElement(By.xpath(loginpage.getValue("archivesManage"))).isDisplayed(), true);
+	}*/
 
 	@AfterClass //关闭浏览器
 	public void releaseBrowser(){
